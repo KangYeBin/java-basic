@@ -32,6 +32,15 @@ public class Score {
 		this.avg = this.total / 3.0;
 	}
 
+	public static boolean isValidateScore(int score) {
+		if (score < 0 || score > 100) {
+			System.out.println("유효하지 않는 점수입니다 (0 ~ 100)");
+			return false;
+		} else {
+			return true;
+		}
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -59,14 +68,5 @@ public class Score {
 	void scoreInfo() {
 		System.out.printf("이름 : %s\n국어 : %d, 수학 : %d, 영어 : %d\n총점 : %d, 평균 : %.2f\n"
 				, this.name, this.kor, this.eng, this.math, this.total, this.avg);
-	}
-
-	public boolean isValidateScore(int score) {
-		if (score < 0 || score > 100) {
-			System.out.println("유효하지 않는 점수입니다 (0 ~ 100)");
-			return false;
-		} else {
-			return true;
-		}
 	}
 }
