@@ -1,6 +1,7 @@
 package video.main;
 
 import video.common.AppService;
+import video.user.service.UserService;
 
 public class AppController {
 
@@ -10,7 +11,7 @@ public class AppController {
 	public void chooseSystem(int selectNumber) {
 		switch (selectNumber) {
 			case 1:
-
+				service = new UserService();
 				break;
 			case 2:
 
